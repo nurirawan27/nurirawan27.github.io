@@ -9,6 +9,20 @@
         sessionStorage.removeItem('isLoggedIn');
         window.location.href = 'index.html';
     }
+
+    // Fungsi toggle untuk menampilkan atau menyembunyikan pesan semangat
+    function showEncouragement() {
+        const encouragementDiv = document.querySelector('.encouragement');
+        
+        // Jika elemen tersembunyi, tampilkan; jika terlihat, sembunyikan
+        if (encouragementDiv.classList.contains('hidden')) {
+            encouragementDiv.classList.remove('hidden');
+            encouragementDiv.classList.add('visible');
+        } else {
+            encouragementDiv.classList.remove('visible');
+            encouragementDiv.classList.add('hidden');
+        }
+    }
 </script>
 
 <!DOCTYPE html>
@@ -24,34 +38,32 @@
     <div class="container">
         <header class="header">
             <h1>Halo Dhanik!</h1>
-            <p>cuma mau bilang kalo semua akan baik2 aja😊.</p>
+            <p>Cuma mau bilang kalau semua akan baik-baik saja 😊.</p>
         </header>
         <div class="content">
             <div class="message">
-                <h2>Percaya dehh</h2>
-                <p>Segala sesuatunya pasti berlalu. Tetap kuat yaaww percaya kalo kamu bisa lewati itu semua, dinikmatin segala kebahagiaan yang ada sekarang, dan kalo lagi ngerasa sedih percaya deh "it will pass", kesedihan itu akan berlalu.</p>
-                <p>sedih boleh, nangis boleh, tapi jangan berlarut2 yaaww, pasti bakal terlawati kok, dan di depan sana masih banyak kebahagiaan yang menunggu, semangat dan percaya semua akan berjalan baik sesuai skenario yang di atas yaa😉</p>
+                <h2>Percaya deh</h2>
+                <p>Segala sesuatunya pasti berlalu. Tetap kuat yaaw, percaya kalau kamu bisa lewati itu semua, nikmati segala kebahagiaan yang ada sekarang, dan kalau sedang sedih, percaya deh "it will pass", kesedihan itu akan berlalu.</p>
+                <p>Sedih boleh, nangis boleh, tapi jangan berlarut-larut yaaww. Pasti bakal terlalui, dan di depan sana masih banyak kebahagiaan yang menunggu. Semangat dan percaya semua akan berjalan baik sesuai skenario yang di atas yaa 😉</p>
             </div>
             <button class="encourage-button" onclick="showEncouragement()">Klik untuk Semangat</button>
             <div class="encouragement hidden">
-                <!-- Gambar di sebelah kiri -->
+                <!-- Gambar di sebelah kiri dan kanan -->
                 <img src="1.png" alt="Left Image" style="width: 100px; height: auto;">
-                <img src="2.png" alt="Right Image" style="width: 100px; height: auto;">
-            
+                
                 <!-- Teks utama -->
                 <div style="text-align: center;">
-                    <p>Kereennn! terimakasi karna sudah bertahan sejauh ini🤗👌🤘!</p>
-                    <p>badainya pasti akan berlalu, dan pelangi akan muncul setelahnya.</p>
-                    <p>🌠kamu lebih kuat dari yang kamu pikirkan💫.</p>
+                    <p>Keren! Terima kasih karena sudah bertahan sejauh ini 🤗👌🤘!</p>
+                    <p>Badai pasti akan berlalu, dan pelangi akan muncul setelahnya.</p>
+                    <p>🌠 Kamu lebih kuat dari yang kamu pikirkan 💫.</p>
                 </div>
-            
+
+                <img src="2.png" alt="Right Image" style="width: 100px; height: auto;">
             </div>
-            
         </div>
         <footer class="footer">
-            <p>&copy; 2024 keep happy and smiling</p>
+            <p>&copy; 2024 Keep Happy and Smiling</p>
         </footer>
     </div>
-    <script src="script.js"></script>
 </body>
 </html>
