@@ -1,0 +1,57 @@
+<script>
+    // Cek jika pengguna belum login, arahkan ke index.html
+    if (sessionStorage.getItem('isLoggedIn') !== 'true') {
+        window.location.href = 'index.html';
+    }
+
+    // Fungsi logout
+    function logout() {
+        sessionStorage.removeItem('isLoggedIn');
+        window.location.href = 'index.html';
+    }
+</script>
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>untukmu</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="1.png">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Halo Dhanik!</h1>
+            <p>cuma mau bilang kalo semua akan baik2 aja😊.</p>
+        </header>
+        <div class="content">
+            <div class="message">
+                <h2>Percaya dehh</h2>
+                <p>Segala sesuatunya pasti berlalu. Tetap kuat yaaww percaya kalo kamu bisa lewati itu semua, dinikmatin segala kebahagiaan yang ada sekarang, dan kalo lagi ngerasa sedih percaya deh "it will pass", kesedihan itu akan berlalu.</p>
+                <p>sedih boleh, nangis boleh, tapi jangan berlarut2 yaaww, pasti bakal terlawati kok, dan di depan sana masih banyak kebahagiaan yang menunggu, semangat dan percaya semua akan berjalan baik sesuai skenario yang di atas yaa😉</p>
+            </div>
+            <button class="encourage-button" onclick="showEncouragement()">Klik untuk Semangat</button>
+            <div class="encouragement hidden">
+                <!-- Gambar di sebelah kiri -->
+                <img src="1.png" alt="Left Image" style="width: 100px; height: auto;">
+                <img src="2.png" alt="Right Image" style="width: 100px; height: auto;">
+            
+                <!-- Teks utama -->
+                <div style="text-align: center;">
+                    <p>Kereennn! terimakasi karna sudah bertahan sejauh ini🤗👌🤘!</p>
+                    <p>badainya pasti akan berlalu, dan pelangi akan muncul setelahnya.</p>
+                    <p>🌠kamu lebih kuat dari yang kamu pikirkan💫.</p>
+                </div>
+            
+            </div>
+            
+        </div>
+        <footer class="footer">
+            <p>&copy; 2024 keep happy and smiling</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

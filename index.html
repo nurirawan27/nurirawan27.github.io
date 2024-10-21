@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="login.css">
+    <link rel="icon" type="image/png" href="1.png">
+</head>
+<body>
+    <div class="login-container">
+        <h2>Login Dulu Yaaww</h2>
+        <form id="loginForm" onsubmit="return validateLogin()">
+            <label for="name">Nama:</label>
+            <input type="text" id="name" name="name" placeholder="Masukkin namamu" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="paswordnya tgl lahirku hehe" required>
+
+            <button type="submit">Login</button>
+        </form>
+        <p id="error-message" style="color: red; display: none;">Nama atau password salah!</p>
+    </div>
+
+    <script>
+        // Fungsi untuk validasi login
+        function validateLogin() {
+            const name = document.getElementById('name').value;
+            const password = document.getElementById('password').value;
+
+            // Cek jika nama dan password benar
+            if (name === 'dhanik' && password === '12032000') {
+                // Simpan status login di sessionStorage
+                sessionStorage.setItem('isLoggedIn', 'true');
+                // Arahkan ke halaman home.html
+                window.location.href = 'home.html';
+                return false;
+            } else {
+                // Tampilkan pesan error
+                document.getElementById('error-message').style.display = 'block';
+                return false;
+            }
+        }
+
+        // Cek jika pengguna sudah login, arahkan langsung ke home.html
+        if (sessionStorage.getItem('isLoggedIn') === 'true') {
+            window.location.href = 'home.html';
+        }
+    </script>
+</body>
+</html>
